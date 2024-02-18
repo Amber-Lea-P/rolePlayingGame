@@ -75,3 +75,12 @@ Object properties are written as key: value pairs, where key is the name of the 
     {
     name: "Quincy Larson"
     }
+
+An if statement is used to make decisions in code. The keyword if is followed by a condition in parentheses. If the condition is true, the code inside the curly braces {} is executed. If the condition is false, the code inside the curly braces is skipped.
+
+Here is an example of an if statement:
+
+const num = 5;
+if (num >= 3) {
+  console.log("This code will run because num is greater than or equal to 3.");
+}

@@ -1,6 +1,6 @@
 let xp = 0;
 let health = 100;
-let gold = 50;
+let gold = 100;
 let currentWeapon = 0;
 let fighting;
 let monsterHealth;
@@ -85,15 +85,24 @@ function goCave() {
         text.innerText = "You do not have enough gold to buy health.";
       }
   }
-  
+  /* A method is a function that is attached to a particular object */
+
   function buyWeapon() {
-    if (gold >= 30) {
+    if (currentWeapon < weapons.length - 1) {
+      if (gold >= 30) {
         gold -= 30;
         currentWeapon++;
         goldText.innerText = gold;
         let newWeapon = weapons[currentWeapon].name;
         text.innerText = "You now have a " + newWeapon + ".";
-    }
+        inventory.push(newWeapon);
+        text.innerText += " In your inventory you have: " + inventory;
+      } else {
+        text.innerText = "You do not have enough gold to buy a weapon.";
+      }
+    }else {
+        text.innerText = "You already have the most powerful weapon!";
+      }
   }
 
   function fightSlime() {

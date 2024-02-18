@@ -49,3 +49,11 @@ What is charset="UTF-8"?
         button.onclick = myFunction;
     
     In this example, button is the button element, and myFunction is a reference to a function. When the button is clicked, myFunction will be called.
+
+8.) The innerText property controls the text that appears in an HTML element. For example:
+
+    <p id="info">Demo content</p> 
+    const info = document.querySelector("#info"); 
+    info.innerText = "Hello World"; 
+    
+The following example would change the text of the p element from Demo content to Hello World.

@@ -1,6 +1,6 @@
 let xp = 0;
 let health = 100;
-let gold = 100;
+let gold = 999;
 let currentWeapon = 0;
 let fighting;
 let monsterHealth;
@@ -102,7 +102,16 @@ function goCave() {
       }
     }else {
         text.innerText = "You already have the most powerful weapon!";
+        button2.innerText = "Sell weapon for 15 gold";
+        button2.onclick = sellWeapon;
       }
+  }
+
+  function sellWeapon() {
+    if (inventory.length > 1) {
+      gold += 15;
+      goldText.innerText = gold; 
+    }
   }
 
   function fightSlime() {

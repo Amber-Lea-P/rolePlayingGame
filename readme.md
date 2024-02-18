@@ -33,3 +33,19 @@ What is charset="UTF-8"?
         For queries to work, the script element has to be after the html code. IF not the code runs before the browser has finished reading the HTML and your "document.querySelector()" or another DOM will  not see what is inteded to be seen because the browser hasnt processed it yet. This can be rectified by adding the script text right before the ending </body> tag.
 
 ** If you are not going to assign a new value to a variable, it is best practice to use the const keyword to declare it instead of the let keyword. This will tell JavaScript to throw an error if you accidentally reassign it.**
+
+6.) Set up functions:
+    Functions are special tools that allow you to run sections of code at specific times. You can declare functions using the function keyword. Here is an example of a function called functionName - note the opening and closing curly braces. These indicate the section of code that is within the function.
+
+        function functionName() {
+
+        }
+
+7.) Assign functions to buttons:
+    Buttons have a special property called onclick, which you can use to determine what happens when someone clicks that button.
+
+    You can access properties in JavaScript a couple of different ways. The first is with dot notation. Here is an example of using dot notation to set the onclick property of a button to a function reference.
+
+        button.onclick = myFunction;
+    
+    In this example, button is the button element, and myFunction is a reference to a function. When the button is clicked, myFunction will be called.

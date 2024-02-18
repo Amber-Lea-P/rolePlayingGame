@@ -24,7 +24,7 @@ What is charset="UTF-8"?
         Strings are used to store things like words or text. Strings are surrounded with double quotes, single quotes, or backticks. Example: let developer: "Naomi";
         Array: An array can be used to hold multiple values. For example: let order: ["first", "second", "third"];
 
-4.) Before you can make the interactive JavaScript portion of the game (website), you must create the HTML elementw taht will display the game information. 
+4.) Before you can make the interactive JavaScript portion of the game (website), you must create the HTML element that will display the game information. 
 
 5.) JavaScript interacts with the HTML using the Document Object Model, or DOM. The DOM is a tree of objects that represents the HTML. You can access the HTML using the document object, which represents your entire HTML document.
     One method for finding specific elements in your HTML is using the querySelector() method. The querySelector() method takes a CSS selector as an argument and returns the first element that matches that selector. For example, to find the <h1> element in your HTML, you would write:

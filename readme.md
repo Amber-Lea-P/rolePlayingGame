@@ -57,3 +57,21 @@ What is charset="UTF-8"?
     info.innerText = "Hello World"; 
     
 The following example would change the text of the p element from Demo content to Hello World.
+
+Clean up code:
+You have repetition in the goTown and goStore functions. When you have repetition in your code, this is a sign that you need another function. Functions can take parameters, which are values that are given to the function each time it is run. Here is a function that takes a parameter called param:
+
+function myFunction(param) {
+    console.log(param);
+}
+Create an empty update function that takes a parameter called location.
+
+**Arrays can store any data type. This time, your array will be storing objects. Objects are similar to arrays, but with a few differences. One difference is that objects use properties, or keys, to access and modify data.
+
+Objects are indicated by curly braces. An empty object would look like {}.
+
+Object properties are written as key: value pairs, where key is the name of the property (or the key), and value is the value that property holds. For example, here is an object with a key of name set to "Quincy Larson".
+
+    {
+    name: "Quincy Larson"
+    }

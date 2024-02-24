@@ -28,7 +28,7 @@ const weapons = [
     {name: 'fanged beast', level: 8, health: 60},
     {name: 'dragon', level: 20, health: 300},
   ];
-  
+
 const locations = [
     {
       name: "town square",
@@ -124,13 +124,19 @@ function goCave() {
   }
 
   function fightSlime() {
-
+    fighting = 0;
+    goFight()
   }
   
   function fightBeast() {
-  
+    fighting = 1;
+    goFight();
   }
-
+  
   function fightDragon() {
-    console.log("Fighting dragon.");
+    fighting = 2;
+    goFight();
+  }
+  function goFight() {
+
   }

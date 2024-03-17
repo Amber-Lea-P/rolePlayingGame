@@ -71,6 +71,12 @@ const locations = [
       "button text": ["REPLAY?", "REPLAY?", "REPLAY?"],
       "button functions": [restart, restart, restart],
       text: "You defeat the dragon! YOU WIN THE GAME! &#x1F389;"
+    },
+    { 
+      name: "easter egg", 
+      "button text": ["2", "8", "Go to town square?"], 
+      "button functions": [pickTwo, pickEight, goTown], 
+      text: "You find a secret game. Pick a number above. Ten numbers will be randomly chosen between 0 and 10. If the number you choose matches one of the random numbers, you win!" 
     }
   ];
 
@@ -189,6 +195,10 @@ function goCave() {
       }else {
         defeatMonster();
       }
+    } 
+      if (Math.random() <= .1 && inventory.length !== 1) {
+        text.innerText += " Your " + inventory.pop() + " breaks."
+        currentWeapon--;
     }
   }
   
@@ -196,6 +206,11 @@ function goCave() {
     const hit = (level * 5) - (Math.floor(Math.random() * xp));
     return hit > 0 ? hit : 0;
   }
+
+  function isMonsterHit() {
+    return Math.random() > .2 || health < 20;
+  }
+
 
   function dodge() {
     text.innerText = "You dodge the attack from the " + monsters[fighting].name;
@@ -213,6 +228,10 @@ function goCave() {
     update(locations[5]);
   }
 
+  function winGame() {
+    update(locations[6]);
+  }
+
   function restart() {
     xp = 0;
     health = 100;
@@ -225,7 +244,29 @@ function goCave() {
     goTown();
   }
 
-  function winGame() {
-    update(locations[6]);
+
+  
+  function easterEgg() {
+    update(locations[7]);
+  }
+
+  function pick(guess) {}
+
+  function pickTwo() {
+    pick(2);
   }
   
+  function pickEight() {
+    pick(8);
+  }
+
+  function pick(guess) {
+    const numbers = []
+    while (numbers.length < 10) {
+      numbers.push(Math.floor(Math.random() * 11));
+    }
+    text.innerText = "You picked " + guess + ". Here are the random numbers:\n";
+    for (let i = 0; i < 10; i++) {
+
+    }
+  }
